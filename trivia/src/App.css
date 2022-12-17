@@ -70,19 +70,21 @@
 }
 
 .choices {
-  min-height: 40px;
-  max-height: 50px;
-  min-width: 150px;
-  max-width: 200px;
+  height: 50px;
+  width: 250px;
   cursor: pointer;
   font-weight: 700;
   color: #293264;
   border-color: #4D5B9E;
   background-color: white;
   border-radius: 14px;
-  font-size: 16px;
-  font-size-adjust: 16px;
+  font-size: 12pxrem;
   padding: 0 10px;
+}
+
+.choices:hover {
+  box-shadow: inset 0 0 3px black;
+  font-size: 12px;
 }
 
 .main {
@@ -90,6 +92,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+}
+.bottom h3 {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .check {
@@ -108,5 +120,53 @@
 .check:hover {
   box-shadow: inset 0 0 10px black;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .question {
+    font-size: 14px;
+  }
+
+  .choices {
+    font-size: 8px;
+    height: 40px;
+    margin: 0 5px;
+    flex-wrap: wrap;
+  }
+  .choices:hover {
+    box-shadow: inset 0 0 3px black;
+    font-size: 8px;
+  }
+  img {
+    display: none;
+  }
+
+  .main {
+    margin: 80px 0;
+  }
+
+  
+
+  .triviaStart h1 {
+    font-size: 26px;
+  }
+
+
+  .buttons {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .choices {
+    margin: 2px;
+  }
+
+
+
+  
+
+
+
+  
 }
 
