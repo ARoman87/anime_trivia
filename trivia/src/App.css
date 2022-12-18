@@ -5,12 +5,13 @@
 }
 
 .blob1 {
-  position: absolute;
+  position: fixed;
   right: 0;
+  top: 0;
 }
 
 .blob2 {
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
@@ -41,6 +42,10 @@
 .triviaStart button:hover {
   box-shadow: inset 0 0 10px black;
   font-size: 30px;
+}
+
+img {
+  z-index: -1;
 }
 
 .triviaMain {
@@ -88,10 +93,7 @@
 }
 
 .main {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: 80px 0 0 0;
 }
 
 .bottom {
@@ -122,30 +124,37 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 950px) {
   .question {
     font-size: 14px;
   }
 
   .choices {
-    font-size: 8px;
-    height: 40px;
-    margin: 0 5px;
-    flex-wrap: wrap;
+    font-size: 12px;
+    margin: 2px 5px;
+    border-radius: 4px;
+  }
+  .buttons {
+    height: 150px;
+    justify-content: center;
+    align-items: center;
   }
   .choices:hover {
     box-shadow: inset 0 0 3px black;
-    font-size: 8px;
+    font-size: 12px;
   }
   img {
-    display: none;
+    z-index: -1;
   }
 
-  .main {
-    margin: 80px 0;
+  .blob1 {
+    position: fixed;
   }
 
-  
+  .blob2 {
+    position: fixed;
+    
+  }
 
   .triviaStart h1 {
     font-size: 26px;
@@ -157,9 +166,14 @@
     padding-bottom: 10px;
   }
 
-  .choices {
-    margin: 2px;
+  .main {
+    margin: 0;
   }
+
+  
+
+
+  
 
 
 

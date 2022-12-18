@@ -89,23 +89,25 @@ function App() {
   
 
   return (
-    <div>
+    <div className="main">
       <img src="./images/blobs.png" alt="" className="blob1"/>
       <img src="./images/blobs2.png" alt="" className="blob2"/>
+    
       
       {showStart ? <Start startQuiz={startQuiz}/> : 
-      <div className="main">
+      <div>
         {quest}
         {showAnswers ? 
         <div className="bottom"><h3 className="score">{"You scored " + score + "/5 correct answers"}</h3>
         <button className="check" onClick={playAgain}>Play Again</button></div>
-      : 
-      <button className="check" disabled={!allComplete} onClick={checkAnswers}>Check Answers</button>
+        : 
+        <div className="bottom"><button className="check" disabled={!allComplete} onClick={checkAnswers}>Check Answers</button></div>
       
-      }
+        }
         
       </div>
-    }
+      }
+      
     </div>
   )
 }
